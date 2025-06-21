@@ -10,4 +10,10 @@ export default defineConfig({
         }),
         vue(),
     ],
+    resolve: {
+        extensions: [".vue", ".js"],
+        alias: {
+            "@img": "/resources/img",
+        },
+    },
 });
