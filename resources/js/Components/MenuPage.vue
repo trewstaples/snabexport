@@ -41,8 +41,11 @@
 
 <script setup>
 const mainLinks = [
-    { name: "Главная", href: "/" },
+    { name: "Аренда", href: "/rent" },
+    { name: "Сервис", href: "/service" },
     { name: "Новости", href: "/news" },
+    { name: "Статьи", href: "/articles" },
+    { name: "Видео", href: "/video" },
     { name: "О компании", href: "/about" },
     { name: "Контакты", href: "/contacts" },
 ];
