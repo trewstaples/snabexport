@@ -1,0 +1,32 @@
+version: "4.24"
+services:
+  server:
+    image: "nginx:stable-alpine"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/:/var/www/html
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - php
+      - db
+
+  php:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src/:/var/www/html:delegated
+
+  db:
+    image: "postgres:13-bullseye"
+    environment:
+      POSTGRES_DB: "snabexport"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database_data:/var/lib/postgresql/data 700
+      - ./init_scripts_db:/docker-entrypoint-initdb.d/

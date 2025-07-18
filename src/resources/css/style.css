@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-VariableFont_wght.woff2")
+        format("woff2-variations");
+    font-weight: 200 800;
+    font-display: swap;
+}
+
+@theme {
+    --color-primary: #2b435d;
+    --color-secondary: #3b82f6;
+    --font-size-main: 18px;
+}
+
+@layer components {
+    .text-primary {
+        color: var(--color-primary);
+    }
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+    .hover\:text-secondary:hover {
+        color: var(--color-secondary);
+    }
+    .text-main {
+        font-size: var(--font-size-main);
+    }
+    .text-logo {
+        font-size: var(--font-size-logo);
+    }
+}
+
+/* Применяем шрифт ко всему приложению */
+@layer base {
+    html {
+        font-family: "Manrope", system-ui, sans-serif;
+    }
+}
+
+/* Common section styles */
+.section-default {
+    padding-bottom: clamp(16px, 4vw, 32px);
+    padding-top: clamp(32px, 4vw, 48px);
+    padding-left: 1.25rem; /* px-5 */
+    padding-right: 1.25rem; /* px-5 */
+}
+
+.section-container {
+    @apply mx-auto flex max-w-7xl flex-col gap-12;
+}
+
+.section-title {
+    @apply text-primary text-left text-2xl font-bold md:text-3xl lg:text-4xl;
+}
+
+/* Grid styles */
+.grid-adaptive-gap {
+    gap: clamp(24px, 3vw, 48px);
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.rounded-8 {
+    border-radius: 8px;
+}
