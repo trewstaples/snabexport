@@ -8,6 +8,10 @@ export const menuItems = [
         href: "/brands",
     },
     {
+        name: "Интернет-магазин",
+        href: "/online-store",
+    },
+    {
         name: "Аренда",
         href: "/rental",
     },

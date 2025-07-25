@@ -17,7 +17,10 @@ class DatabaseSeeder extends Seeder
             BrandsSeeder::class,
             ServicesSeeder::class,
             NewsSeeder::class,
-            CompanyDocumentsSeeder::class
+            CompanyDocumentsSeeder::class,
+            ProductCategoriesSeeder::class,
+            CountriesSeeder::class,
+            ProductsSeeder::class,
         ]);
     }
 }

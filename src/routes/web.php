@@ -6,6 +6,7 @@ use App\Models\CompanyDocumentCategory;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BrandContrtoller;
+use App\Http\Controllers\OnlineStoreController;
 use App\Http\Controllers\ServiceController;
 
 Route::get('/', MainController::class);
@@ -15,6 +16,8 @@ Route::get('brands', [BrandContrtoller::class, 'index']);
 Route::get('brands/{brand:slug}', [BrandContrtoller::class, 'show']);
 Route::get('brands-categories/{brandCategory:slug}', [BrandContrtoller::class, 'showBrandCategory']);
 
+Route::get('online-store/{path?}', [OnlineStoreController::class, 'index'])
+    ->where('path', '.*');
 
 Route::get('rental', [ServiceController::class, 'rental']);
 Route::get('service', [ServiceController::class, 'service']);
