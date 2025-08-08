@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <Layout title="О компании">
         <!-- Главный заголовок -->
         <section
             class="section-default bg-gradient-to-r from-blue-50 to-indigo-50"

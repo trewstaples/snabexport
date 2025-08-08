@@ -31,17 +31,17 @@
                             class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white"
                         >
                             <h1
+                                v-html="slide.title"
                                 class="mb-4 text-center text-4xl font-bold md:text-6xl"
-                            >
-                                {{ slide.title }}
-                            </h1>
+                            ></h1>
                             <p
                                 class="mb-8 max-w-3xl text-center text-lg md:text-xl"
                             >
                                 {{ slide.description }}
                             </p>
                             <button
-                                class="bg-primary hover:bg-primary-dark rounded-lg px-8 py-3 text-lg font-semibold text-white transition-colors"
+                                @click="router.visit(slide.link)"
+                                class="bg-primary hover:bg-primary-dark cursor-pointer rounded-lg px-8 py-3 text-lg font-semibold text-white transition-colors"
                             >
                                 {{ slide.buttonText }}
                             </button>
@@ -61,32 +61,31 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { register } from "swiper/element/bundle";
 import "swiper/css";
 import "swiper/css/pagination";
+import { router } from "@inertiajs/vue3";
 register();
 
 const slides = [
     {
         image: new URL("@img/enerpac.webp", import.meta.url).href,
         alt: "Enerpac",
-        title: "Профессиональное оборудование",
-        description:
-            "Широкий ассортимент гидравлического оборудования от ведущих мировых производителей",
-        buttonText: "Смотреть каталог",
+        title: "Гидравлическое оборудование в аренду",
+        buttonText: "Подробнее",
+        link: "/rental",
     },
     {
         image: new URL("@img/stalex.webp", import.meta.url).href,
         alt: "Stalex",
-        title: "Металлообрабатывающее оборудование",
-        description:
-            "Качественные станки и инструменты для профессиональной металлообработки",
-        buttonText: "Узнать больше",
+        title: "Станки Stalex",
+        buttonText: "Подробнее",
+        link: "/brands/stalex",
     },
     {
         image: new URL("@img/winding-machine.webp", import.meta.url).href,
         alt: "Winding Machine",
-        title: "Инновационные технологии",
-        description:
-            "Современные решения для промышленного производства и сервисного обслуживания",
-        buttonText: "Наши услуги",
+        title: "Намоточный станок вертикального типа <br> для производства спирально-навитых прокладок",
+        description: "WW500SC-A SP с ЧПУ",
+        buttonText: "Подробнее",
+        link: "/catalog/product/namotocnyi-navivocnyi-stanok-vertikalnogo-tipa-ww500sc-a-sp-s-cpu",
     },
 ];
 </script>

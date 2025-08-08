@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <Layout :title="service.name" :description="description">
         <section class="section-default">
             <section class="section-container">
                 <!-- Хедер с иконкой и заголовком -->
@@ -38,6 +38,10 @@ import Layout from "@/Layouts/Layout.vue";
 const props = defineProps({
     service: {
         type: Object,
+        required: true,
+    },
+    description: {
+        type: String,
         required: true,
     },
 });

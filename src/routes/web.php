@@ -7,6 +7,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BrandContrtoller;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CatalogController;
 
 Route::get('/', MainController::class);
 
@@ -14,6 +15,10 @@ Route::get('/', MainController::class);
 Route::get('brands', [BrandContrtoller::class, 'index']);
 Route::get('brands/{brand:slug}', [BrandContrtoller::class, 'show']);
 Route::get('brands-categories/{brandCategory:slug}', [BrandContrtoller::class, 'showBrandCategory']);
+
+Route::get('catalog/product/{product:slug}', [CatalogController::class, 'show']);
+Route::get('catalog/{path?}', [CatalogController::class, 'index'])
+    ->where('path', '.*');
 
 
 Route::get('rental', [ServiceController::class, 'rental']);

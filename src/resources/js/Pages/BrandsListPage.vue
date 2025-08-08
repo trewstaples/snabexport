@@ -1,5 +1,8 @@
 <template>
-    <Layout>
+    <Layout
+        title="Бренды"
+        description="Каталог брендов компании СнабЭкспорт ПРО"
+    >
         <div class="section-default">
             <div class="section-container">
                 <!-- Категории продукции -->

@@ -48,17 +48,17 @@
                     :class="{ 'animate-fade-in-up-delay-2': isVideoLoaded }"
                 >
                     <button
-                        @click="scrollToSection('catalog')"
-                        class="bg-primary hover:bg-primary-dark rounded-lg px-8 py-4 text-lg font-semibold text-white transition-all duration-300"
+                        @click="router.visit('/catalog/rasprodaza')"
+                        class="bg-primary hover:bg-primary-dark cursor-pointer rounded-lg px-8 py-4 text-lg font-semibold text-white transition-all duration-300"
                     >
                         Смотреть каталог
                     </button>
 
                     <button
-                        @click="scrollToSection('about')"
-                        class="rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-white hover:text-black"
+                        @click="router.visit('/brands')"
+                        class="cursor-pointer rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-white hover:text-black"
                     >
-                        О компании
+                        Бренды
                     </button>
                 </div>
             </div>
@@ -87,6 +87,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { router } from "@inertiajs/vue3";
 
 const videoRef = ref(null);
 const isVideoLoaded = ref(false);
@@ -97,13 +98,6 @@ const heroDescription =
 
 const videoSrc = "/storage/videos/hero-video.mp4";
 const fallbackImage = "/storage/images/hero-fallback.png";
-
-const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-    }
-};
 
 const handleVideoLoad = () => {
     isVideoLoaded.value = true;

@@ -1,5 +1,8 @@
 <template>
-    <Layout>
+    <Layout
+        :title="brand.name"
+        :description="`Продажа и поставка оборудования ${brand.name} с доставкой по России. Получите каталог и бесплатную консультацию`"
+    >
         <section class="section-default">
             <section class="section-container">
                 <div class="flex w-full flex-col items-center p-8">

@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <Layout title="Новости">
         <NewsList :newsList="newsList" />
     </Layout>
 </template>

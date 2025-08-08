@@ -1,7 +1,7 @@
 <template>
     <section class="section-default">
         <div class="section-container">
-            <h2 class="section-title">Каталог продукции</h2>
+            <h2 class="section-title">Каталог брендов</h2>
 
             <!-- Сетка категорий -->
             <div

@@ -3,11 +3,10 @@
         <div class="section-container">
             <h1 class="section-title">Новости</h1>
             <div class="flex flex-col gap-8">
-                <a
+                <div
                     v-for="news in newsList"
                     :key="news.id || news.slug"
-                    :href="'/news/' + news.slug"
-                    class="rounded-8 flex cursor-pointer flex-col items-stretch gap-6 p-8 hover:bg-gray-100 md:flex-row"
+                    class="rounded-8 flex flex-col items-stretch gap-6 p-8 md:flex-row"
                 >
                     <div
                         class="order-2 flex flex-1 flex-col justify-between md:order-1"
@@ -25,14 +24,14 @@
                                 v-html="news.text"
                             ></div>
                         </div>
-                        <a
+                        <!--    <a
                             v-if="news.slug"
                             :to="`/news/${news.slug}`"
                             class="mt-2 flex items-center gap-1 text-sm text-gray-400 hover:underline"
                         >
                             Чуть больше подробностей
                             <span aria-hidden="true">→</span>
-                        </a>
+                        </a> -->
                     </div>
                     <div
                         v-if="news.preview_image_name"
@@ -52,7 +51,7 @@
                             />
                         </picture>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
