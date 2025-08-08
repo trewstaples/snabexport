@@ -1,6 +1,6 @@
 <template>
     <footer class="border-t border-gray-200 bg-white">
-        <div class="section-container mx-auto max-w-7xl px-5 py-12">
+        <div class="section-container mx-auto px-5 py-12">
             <!-- Основная информация -->
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <!-- О компании -->
@@ -22,22 +22,59 @@
                     <p class="text-sm text-gray-600">Продажа. Сервис. Аренда</p>
                 </div>
 
+                <!-- Каталог -->
+                <div>
+                    <h3 class="text-primary mb-4 text-lg font-semibold">
+                        <a href="/catalog/rasprodaza"> Каталог </a>
+                    </h3>
+                </div>
+
                 <!-- Оборудование -->
                 <div>
                     <h3 class="text-primary mb-4 text-lg font-semibold">
                         Оборудование
                     </h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li>Промышленная гидравлика</li>
                         <li>
-                            Оборудование и материалы для изготовления уплотнений
+                            <a
+                                href="/brands-categories/industrial-hydraulics"
+                                class="hover:text-primary transition-colors"
+                            >
+                                Промышленная гидравлика
+                            </a>
                         </li>
-                        <li>Металлообрабатывающее оборудование</li>
-                        <li>Подшипники</li>
+
                         <li>
-                            Промышленные пылесосы и оборудование для клининга
+                            <a
+                                href="/brands-categories/metalworking-equipment"
+                                class="hover:text-primary transition-colors"
+                            >
+                                Металлообрабатывающее оборудование
+                            </a>
                         </li>
-                        <li>Инструмент / Автосервис</li>
+                        <li>
+                            <a
+                                href="/brands-categories/bearings"
+                                class="hover:text-primary transition-colors"
+                                >Подшипники</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/brands-categories/vacuum-cleaners-and-cleaning-equipment"
+                                class="hover:text-primary transition-colors"
+                            >
+                                Промышленные пылесосы и оборудование для
+                                клининга
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/brands-categories/tools-and-car-service"
+                                class="hover:text-primary transition-colors"
+                                >Инструмент / Автосервис</a
+                            >
+                        </li>
                     </ul>
                 </div>
 
@@ -49,7 +86,7 @@
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li>
                             <a
-                                href="/services/arenda"
+                                href="/rental"
                                 class="hover:text-primary transition-colors"
                             >
                                 Аренда
@@ -57,10 +94,18 @@
                         </li>
                         <li>
                             <a
-                                href="/services/servis"
+                                href="/service"
                                 class="hover:text-primary transition-colors"
                             >
                                 Сервис
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/repair"
+                                class="hover:text-primary transition-colors"
+                            >
+                                Ремонт
                             </a>
                         </li>
                     </ul>
@@ -120,11 +165,11 @@
             </div>
 
             <!-- Разделитель -->
-            <div class="my-8 border-t border-gray-200"></div>
+            <div class="my-2 border-t border-gray-200"></div>
 
             <!-- Нижняя часть -->
             <div
-                class="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0"
+                class="flex flex-col items-center justify-between md:flex-row md:space-y-0"
             >
                 <div class="text-center text-sm text-gray-500 md:text-left">
                     © {{ currentYear }} СнабЭкспорт. Все права защищены.
