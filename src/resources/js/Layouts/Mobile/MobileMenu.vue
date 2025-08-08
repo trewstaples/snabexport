@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center lg:hidden">
         <!-- Поиск -->
-        <div class="relative flex items-center">
+        <!--    <div class="relative flex items-center">
             <div
                 class="absolute top-1/2 right-0 flex h-10 -translate-y-1/2 items-center bg-white transition-all duration-300"
                 :class="[
@@ -55,7 +55,7 @@
                     </svg>
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <!-- Бургер-меню -->
         <button

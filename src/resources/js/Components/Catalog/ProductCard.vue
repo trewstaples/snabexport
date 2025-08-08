@@ -59,12 +59,12 @@
                 <div v-else class="text-sm text-gray-500">Цена по запросу</div>
 
                 <!-- Кнопка корзины -->
-                <button
+                <!-- <button
                     class="bg-primary rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors hover:opacity-90"
                     @click="$emit('add-to-cart', product)"
                 >
                     В корзину
-                </button>
+                </button> -->
             </div>
         </div>
     </div>

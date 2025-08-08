@@ -4,11 +4,11 @@
             <span class="text-2xl font-semibold text-gray-900">
                 {{ displayPrice }}
             </span>
-            <button
+            <!--  <button
                 class="bg-primary rounded-lg px-8 py-3 text-white transition-colors hover:opacity-90"
             >
                 В корзину
-            </button>
+            </button> -->
         </div>
 
         <!-- Информация о выбранной модели -->

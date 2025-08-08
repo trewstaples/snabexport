@@ -153,10 +153,7 @@ const selectedModel = ref(null);
 
 const handleModelSelected = (model) => {
     selectedModel.value = model;
-    console.log("Выбрана модель:", model);
 };
-
-console.log(props.product);
 </script>
 
 <style scoped>

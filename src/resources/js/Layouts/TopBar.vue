@@ -29,7 +29,7 @@
             </div>
 
             <!-- Поисковая строка -->
-            <div class="mx-8 flex flex-1 items-center gap-2">
+            <!-- <div class="mx-8 flex flex-1 items-center gap-2">
                 <svg
                     class="size-5"
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
                         </svg>
                     </button>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Контакты -->
             <div class="flex items-center gap-5 text-sm">
