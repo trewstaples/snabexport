@@ -21,7 +21,7 @@ class BrandContrtoller extends Controller
     public function show(Brand $brand)
     {
         return Inertia::render('BrandDetailPage', [
-            'brand' => $brand
+            'brand' => $brand->load('catalogs')
         ]);
     }
 

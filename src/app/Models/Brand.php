@@ -30,4 +30,9 @@ class Brand extends Model
     {
         return $this->belongsTo(BrandCategory::class);
     }
+
+    public function catalogs()
+    {
+        return $this->hasMany(BrandCatalog::class);
+    }
 }
